@@ -4,6 +4,7 @@
 
 <script>
 import MarkdownIt from 'markdown-it'
+import markdownItAnchor from 'markdown-it-anchor'
 import VRuntimeTemplate from 'v-runtime-template'
 
 export default {
@@ -23,6 +24,11 @@ export default {
         .use(require('markdown-it-sub'))
         .use(require('markdown-it-sup'))
         .use(require('markdown-it-footnote'))
+        .use(markdownItAnchor, {
+          permalink: true,
+          permalinkBefore: true,
+          permalinkSymbol: '' // §
+        })
         .use(require('markdown-it-table-of-contents'))
       let html = md.render(this.markdown)
 
