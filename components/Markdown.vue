@@ -23,6 +23,8 @@ export default {
         .use(require('markdown-it-sub'))
         .use(require('markdown-it-sup'))
         .use(require('markdown-it-footnote'))
+        .use(require('markdown-it-anchor').default)
+        .use(require('markdown-it-table-of-contents'))
       let html = md.render(this.markdown)
 
       html = this.useResponsiveImages(html)

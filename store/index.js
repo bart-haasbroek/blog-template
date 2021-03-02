@@ -25,6 +25,8 @@ export const actions = {
       const data = Object.assign(theResource.getOne(slug), {
         pageType: theResource.slug
       })
+      console.log('theResource', theResource)
+      console.log('data', data)
       data.slug = slug
       commit('set', data)
     }

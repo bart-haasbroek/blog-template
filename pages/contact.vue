@@ -9,7 +9,7 @@
       <template v-slot:default>
         <div class="tile is-ancestor">
           <div class="tile is-parent">
-            <article class="tile is-child box">
+            <!-- <article class="tile is-child box">
               <p class="title">
                 Hello!
               </p>
@@ -39,9 +39,9 @@
                   form submissions...
                 </p>
               </div>
-            </article>
+            </article> -->
           </div>
-          <div class="tile is-parent is-8">
+          <div class="tile is-parent is-12">
             <article class="tile is-child box">
               <contact-form />
             </article>

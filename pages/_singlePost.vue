@@ -59,6 +59,19 @@ export default {
       return `${process.env.URL}/${this.$route.fullPath}`
     }
   },
+  // head() {
+  //   // console.log('setten', this.$cms)
+  //   return {
+  //     title: 'jaaaaa' + this.subtitle,
+  //     meta: [
+  //       {
+  //         hid: 'description123',
+  //         name: 'descriptionewewew',
+  //         content: 'jaaaaa' + this.subtitle
+  //       }
+  //     ]
+  //   }
+  // },
   fetch({ store, params }) {
     setPageData(store, { resource: 'post', slug: params.singlePost })
   }
