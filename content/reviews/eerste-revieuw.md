@@ -1,6 +1,9 @@
 ---
 name: Eerste revieuw
 image: /uploads/about-hero.jpg
+author: Bart Haasbroek
+date: 2019-08-02T04:27:56.800Z
+featureImage: /uploads/marc-olivier-jodoin-nqoinj-ttqm-unsplash.jpg
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque imperdiet

@@ -1,49 +1,49 @@
 <template>
-  <div id="category-page" class="page-wrapper category-page">
-    <site-hero
-      :title="$store.state.name"
-      :subtitle="$store.state.content"
-      :image="$store.state.image"
-    />
-    <main-section theme="sidebar-right">
+  <div id="post-page" class="page-wrapper post-page">
+    <site-hero :title="title" :image="featureImage">
+      <span
+        v-if="author && $siteConfig.posts.displayAuthor"
+        class="author-wrapper"
+      >
+        <strong>Author:</strong> {{ author }}
+      </span>
+      <span v-if="date" class="date-wrapper">
+        <strong>Published on:</strong> {{ date }}
+      </span>
+    </site-hero>
+    <main-section :one-column-constrained="true">
       <template v-slot:default>
-        <!-- Posts in Category -->
-        <posts-grid :category="[$store.state.name]" :per-row="2" />
-      </template>
-      <template v-slot:sidebar>
-        <h3 class="subtitle">
-          All Categories
-        </h3>
-        <div class="panel">
-          <nuxt-link
-            v-for="cat in allCats"
-            :key="cat.slug"
-            :to="`/categories/${cat.slug}`"
-            :class="{
-              'panel-block': true,
-              'is-active': cat.slug === $route.params.single
-            }"
-          >
-            {{ cat.name }}
-          </nuxt-link>
+        <div class="post-wrapper">
+          <markdown :markdown="$store.state.content" />
         </div>
       </template>
     </main-section>
   </div>
 </template>
 <script>
-import { setPageData } from '../../helper'
+import { mapState } from 'vuex'
+import { setPageData, getFormattedDate } from '../../helper'
+import Markdown from '~/components/Markdown'
 export default {
-  data() {
-    return {
-      allCats: []
+  components: {
+    Markdown
+  },
+  computed: {
+    ...mapState(['title', 'featureImage', 'author', 'slug']),
+    date() {
+      return getFormattedDate(this.$store.state.date)
+    },
+    url() {
+      return `${process.env.URL}/${this.$route.fullPath}`
     }
   },
   fetch({ store, params }) {
-    setPageData(store, { resource: 'category', slug: params.single })
-  },
-  async created() {
-    this.allCats = await this.$cms.category.getAll()
+    setPageData(store, { resource: 'review', slug: params.single })
   }
 }
 </script>
+<style scoped lang="scss">
+.edit-post {
+  margin-bottom: 20px;
+}
+</style>
