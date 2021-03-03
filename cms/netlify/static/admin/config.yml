@@ -39,6 +39,16 @@ collections:
       - { label: 'Name', name: 'name', widget: 'string' }
       - { label: 'Image', name: 'image', widget: 'image' }
       - { label: 'Description', name: 'description', widget: 'markdown' }
+  - name: 'reviews'
+    label: 'Reviews'
+    folder: 'content/reviews'
+    create: true
+    slug: '{{slug}}'
+    identifier_field: name
+    fields:
+      - { label: 'Name', name: 'name', widget: 'string' }
+      - { label: 'Image', name: 'image', widget: 'image' }
+      - { label: 'Description', name: 'description', widget: 'markdown' }
   - name: 'pages'
     label: 'Pages'
     folder: 'content/pages' # The path to the folder where the documents are stored

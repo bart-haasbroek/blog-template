@@ -23,6 +23,10 @@ export default {
       link: '/'
     },
     {
+      name: 'Reviews',
+      link: '/reviews'
+    },
+    {
       name: 'Over mij',
       link: '/about'
     },
