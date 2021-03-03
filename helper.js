@@ -14,6 +14,26 @@ export const fullUrl = () => {
 
 export const getFormattedDate = (date) => {
   const months = [
+    'januari',
+    'februari',
+    'maart',
+    'april',
+    'mei',
+    'juni',
+    'juli',
+    'augustus',
+    'september',
+    'oktober',
+    'november',
+    'december'
+  ]
+  const dateObj = new Date(date)
+  return `${dateObj.getDate()} ${months[dateObj.getMonth()]
+    }, ${dateObj.getFullYear()}`
+}
+
+export const getFormattedDate2 = (date) => {
+  const months = [
     'January',
     'February',
     'March',
@@ -28,7 +48,6 @@ export const getFormattedDate = (date) => {
     'December'
   ]
   const dateObj = new Date(date)
-  return `${
-    months[dateObj.getMonth()]
-  } ${dateObj.getDate()}, ${dateObj.getFullYear()}`
+  return `${months[dateObj.getMonth()]
+    } ${dateObj.getDate()}, ${dateObj.getFullYear()}`
 }
