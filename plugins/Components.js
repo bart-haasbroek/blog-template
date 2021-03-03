@@ -11,8 +11,10 @@ import SiteHero from '../components/SiteHero'
 import SiteLogo from '../components/SiteLogo'
 import SiteNav from '../components/SiteNav'
 import ResourceGrid from '~/components/grids/ResourceGrid'
+import ReviewsGrid from '~/components/grids/ReviewsGrid'
 
 Vue.component(CategoriesGrid.name, CategoriesGrid)
+Vue.component(ReviewsGrid.name, ReviewsGrid)
 Vue.component(DisqusComments.name, DisqusComments)
 Vue.component(IntersectionObserver.name, IntersectionObserver)
 Vue.component(LoadingSpinner.name, LoadingSpinner)
