@@ -9,7 +9,7 @@ featureImage: /uploads/contact-hero.jpg
 ---
 # Heading
 
-\[[toc]]
+[[toc]]
 
 ## Sub heading 1
 
