@@ -25,6 +25,7 @@ In aliquam ac est id luctus. Quisque ultrices justo quis nisl cursus pulvinar. C
 
 <button>click me</button>
 <a href="https://www.google.nl">Naar google</a>
+<a class="button-link" href="https://www.google.nl">Naar google</a>
 
 
 ![](/uploads/contact-person.jpg)
