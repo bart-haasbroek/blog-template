@@ -23,6 +23,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nisl 
 
 In aliquam ac est id luctus. Quisque ultrices justo quis nisl cursus pulvinar. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur consequat justo vel dignissim luctus. Fusce quam nunc, gravida at sagittis quis, feugiat eu orci. Nunc pharetra justo vitae nisl fringilla efficitur. Quisque vel ante aliquam, ullamcorper lacus a, pulvinar ante. Phasellus vitae scelerisque mauris. Duis sed risus vel nunc tristique lobortis. Sed vitae tincidunt risus. Pellentesque nulla orci, consequat in leo non, elementum fermentum orci.
 
+<button>click me</button>
+<a href="https://www.google.nl">Naar google</a>
 
 
 ![](/uploads/contact-person.jpg)
